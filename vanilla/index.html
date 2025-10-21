@@ -6,7 +6,6 @@
         <style>
             .box {
                 width: 300px;
-                background-color: blue;
                 padding: 10px;
                 margin: 0 auto;
             }
@@ -22,27 +21,42 @@
 
             .inline {
                 display: inline-block;
-                height: 100px;
-                width: 50%;
             }
 
-            .left-box {
+            .flex {
+                display: flex;
+            }
+
+            .blue {
                 background-color: blue;
             }
 
-            .right-box {
+            .red {
                 background-color: red;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .box2 {
+                height: 100px;
+                width: 50%;
             }
         </style>
     </head>
     <body>
         <section>
-            <div class="box">
+            <div class="blue box">
                 <p class="text">Hello World</p>
             </div>
         </section>
         <section>
-            <div class="inline left-box"></div><div class="inline right-box"></div>
+            <div class="inline blue box2"></div><div class="inline red box2"></div>
+        </section>
+        <section class="flex">
+            <div class="green box2"></div>
+            <div class="green box2"></div>
         </section>
     </body>
 </html>

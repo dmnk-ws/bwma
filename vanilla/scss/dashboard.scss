@@ -1,0 +1,27 @@
+$orange: #ffa500;
+$purple: #800080;
+$pink: #ffc0cb;
+$brown: #a52a2a;
+
+div {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: auto 10px;
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.brown {
+  background-color: $brown;
+}

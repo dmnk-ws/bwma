@@ -1,0 +1,24 @@
+div {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: auto 10px;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.green {
+  background-color: #00ff00;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+/*# sourceMappingURL=home.css.map */

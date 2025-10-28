@@ -1,0 +1,24 @@
+div {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: auto 10px;
+}
+
+.orange {
+  background-color: #ffa500;
+}
+
+.purple {
+  background-color: #800080;
+}
+
+.pink {
+  background-color: #ffc0cb;
+}
+
+.brown {
+  background-color: #a52a2a;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

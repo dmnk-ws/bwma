@@ -1,0 +1,14 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "building web and mobile apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dmnkws",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

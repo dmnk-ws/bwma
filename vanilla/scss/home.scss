@@ -1,27 +1,21 @@
 @use 'shared';
 
-$blue: #0000ff;
-$red: #ff0000;
-$yellow: #ffff00;
-$green: #00ff00;
-
 div {
   @include shared.box;
-  border-radius: 50%;
 }
 
 .blue {
-  background-color: $blue;
+  background-color: shared.$blue;
 }
 
 .red {
-  background-color: $red;
+  background-color: shared.$red;
 }
 
 .green {
-  background-color: $green;
+  background-color: shared.$green;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: shared.$yellow;
 }

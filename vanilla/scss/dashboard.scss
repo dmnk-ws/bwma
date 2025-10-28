@@ -1,26 +1,60 @@
 @use 'shared';
 
-$orange: #ffa500;
-$purple: #800080;
-$pink: #ffc0cb;
-$brown: #a52a2a;
+$sidebar-width: 300px;
+$header-height: 100px;
 
-div {
+html, body {
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: $header-height;
+  background-color: #24a0ed;
+
+  > nav {
+    padding: 10px 20px;
+  }
+}
+
+.container {
+  display: flex;
+  height: calc(100% - $header-height);
+
+  aside {
+    width: $sidebar-width;
+    background-color: shared.$seagreen;
+  }
+
+  main {
+    width: calc(100% - $sidebar-width);
+    background-color: shared.$beige;
+  }
+}
+
+.logo {
+  background-color: shared.$darksalmon;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.box {
   @include shared.box;
 }
 
 .orange {
-  background-color: $orange;
+  background-color: shared.$orange;
 }
 
 .purple {
-  background-color: $purple;
+  background-color: shared.$purple;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: shared.$pink;
 }
 
 .brown {
-  background-color: $brown;
+  background-color: shared.$brown;
 }

@@ -1,6 +1,19 @@
+$orange: #ffa500;
+$purple: #800080;
+$pink: #ffc0cb;
+$brown: #a52a2a;
+$darksalmon: #e9967a;
+$seagreen: #2e8b57;
+$beige: #f5f5dc;
+$blue: #0000ff;
+$red: #ff0000;
+$yellow: #ffff00;
+$green: #00ff00;
+
 @mixin box {
   width: 100px;
   height: 100px;
   display: inline-block;
-  margin: auto 10px;
+  margin: 10px 10px;
+  border-radius: 50%;
 }

@@ -4,6 +4,9 @@
   "description": "building web and mobile apps",
   "main": "index.js",
   "scripts": {
+    "css": "npx sass scss:css",
+    "serve": "npx http-server . -o -p 8000",
+    "dev": "npm run css && npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dmnkws",

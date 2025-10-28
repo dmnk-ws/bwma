@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  overflow: auto;
 }
 
 header {
@@ -8,6 +9,7 @@ header {
   background-color: #24a0ed;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 header > nav {
   padding: 10px 20px;

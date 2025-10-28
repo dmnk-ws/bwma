@@ -11,6 +11,8 @@ header {
   width: 100%;
   height: $header-height;
   background-color: #24a0ed;
+  position: sticky;
+  top: 0;
 
   > nav {
     padding: 10px 20px;
@@ -19,7 +21,7 @@ header {
 
 .container {
   display: flex;
-  height: calc(100% - $header-height);
+  min-height: calc(100% - $header-height);
 
   aside {
     width: $sidebar-width;
@@ -29,6 +31,7 @@ header {
   main {
     width: calc(100% - $sidebar-width);
     background-color: shared.$beige;
+    padding: 20px;
   }
 }
 

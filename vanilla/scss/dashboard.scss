@@ -1,13 +1,12 @@
+@use 'shared';
+
 $orange: #ffa500;
 $purple: #800080;
 $pink: #ffc0cb;
 $brown: #a52a2a;
 
 div {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  margin: auto 10px;
+  @include shared.box;
 }
 
 .orange {

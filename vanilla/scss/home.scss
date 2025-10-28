@@ -1,13 +1,12 @@
+@use 'shared';
+
 $blue: #0000ff;
 $red: #ff0000;
 $yellow: #ffff00;
 $green: #00ff00;
 
 div {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  margin: auto 10px;
+  @include shared.box;
   border-radius: 50%;
 }
 

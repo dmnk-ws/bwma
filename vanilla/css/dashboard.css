@@ -21,10 +21,11 @@ header > nav {
 }
 .container aside {
   width: 300px;
+  flex-shrink: 0;
   background-color: #2e8b57;
 }
 .container main {
-  width: calc(100% - 300px);
+  flex: 1;
   background-color: #f5f5dc;
   padding: 20px;
 }

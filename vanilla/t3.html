@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first exercise</title>
+    <style>
+        .content > h1 {
+            color: red;
+        }
+
+        p.text {
+            color: blue;
+        }
+
+        span.highlight {
+            color: salmon;
+        }
+
+        #unique {
+            color: green;
+        }
+
+        #bullets li {
+            color: pink;
+        }
+
+        #bullets .item {
+            color: orange;
+        }
+
+        #bullets .special {
+            color: purple;
+        }
+
+        a.link {
+            color: black;
+        }
+    </style>
+</head>
+    <body>
+        <div id="container">
+            <section class="content">
+                <h1>Welcome to Specificity Exercises</h1>
+                <p class="text">
+                    This is a paragraph with
+                    <span class="highlight">highlighted</span>
+                    text.
+                </p>
+                <p id="unique">An element with a unique identifier.</p>
+                <ul id="bullets">
+                    <li class="item">Item 1</li>
+                    <li>Item 2</li>
+                    <li class="special item">Special Item</li>
+                </ul>
+            </section>
+            <a href="#" class="link">More exercises</a>
+        </div>
+    </body>
+</html>

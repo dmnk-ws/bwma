@@ -1,3 +1,13 @@
+export class User {
+    constructor(id = 42, firstname = "", lastname = "", address, email = "", phone = "") {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+    }
+}
 const user = {
     id: 1,
     firstname: "John",
@@ -14,5 +24,4 @@ const user = {
     phone: "0123456789"
 };
 console.log(user);
-export {};
 //# sourceMappingURL=User.js.map

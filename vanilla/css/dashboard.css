@@ -20,8 +20,8 @@ header > nav {
   min-height: calc(100% - 100px);
 }
 .container aside {
-  width: 300px;
   flex-shrink: 0;
+  width: 300px;
   background-color: #2e8b57;
 }
 .container main {

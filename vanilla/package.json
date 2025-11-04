@@ -7,11 +7,16 @@
     "css": "npx sass scss:css",
     "serve": "npx http-server . -o -p 8000",
     "dev": "npm run css && npm run serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "npx tsc"
   },
   "author": "dmnkws",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.93.2"
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }

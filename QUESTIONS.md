@@ -124,13 +124,12 @@ When something is inline, every whitespace is treated as an actual space. The ad
 {
   "name": "vanilla",
   "version": "1.0.0",
-  "description": "",
+  "description": "building web and mobile apps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "dmnkws",
   "license": "ISC"
 }
 ```
@@ -141,7 +140,6 @@ When something is inline, every whitespace is treated as an actual space. The ad
 - **description:** Empty by default, can be filled in later
 - **main:** Entry point file for the project
 - **scripts:** Command shortcuts that can be run with `npm run`
-- **keywords:** Used for package discovery if publishing to NPM
 - **author:** Package creator information
 - **license:** ISC is the default open-source license
 
@@ -163,3 +161,5 @@ When something is inline, every whitespace is treated as an actual space. The ad
   }
 }
 ```
+
+- **dependencies:** List of all the external packages the project needs to run in production

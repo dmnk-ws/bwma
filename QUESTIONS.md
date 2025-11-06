@@ -145,7 +145,7 @@ When something is inline, every whitespace is treated as an actual space. The ad
 - **author:** Package creator information
 - **license:** ISC is the default open-source license
 
-> **3)** How does the created package.json file in `/api` look like?
+> **4)** How does the created package.json file in `/api` look like?
 
 ```json
 {

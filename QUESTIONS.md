@@ -144,3 +144,22 @@ When something is inline, every whitespace is treated as an actual space. The ad
 - **keywords:** Used for package discovery if publishing to NPM
 - **author:** Package creator information
 - **license:** ISC is the default open-source license
+
+> **3)** How does the created package.json file in `/api` look like?
+
+```json
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "building web and mobile apps backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dmnkws",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
+```

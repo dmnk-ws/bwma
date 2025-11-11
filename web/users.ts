@@ -1,5 +1,5 @@
-import {IUser, User} from "./user/User.js";
-import {Address} from "./user/Address.js";
+import {IUser, User} from "./entity/user/User.js";
+import {Address} from "./entity/user/Address.js";
 
 async function fetchAllUsers() {
   return await fetch('http://127.0.0.1:8081/users/')

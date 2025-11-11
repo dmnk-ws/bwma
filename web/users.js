@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { User } from "./user/User.js";
-import { Address } from "./user/Address.js";
+import { User } from "./entity/user/User.js";
+import { Address } from "./entity/user/Address.js";
 function fetchAllUsers() {
     return __awaiter(this, void 0, void 0, function* () {
         return yield fetch('http://127.0.0.1:8081/users/')
@@ -21,18 +21,18 @@ function fetchAllUsers() {
             users.forEach((user) => {
                 const tr = window.document.createElement('tr');
                 const tdId = window.document.createElement('td');
-                tdId.textContent = user.id.toString();
                 const tdFirstname = window.document.createElement('td');
-                tdFirstname.textContent = user.firstname;
                 const tdLastname = window.document.createElement('td');
-                tdLastname.textContent = user.lastname;
                 const tdAddress = window.document.createElement('td');
+                const tdEmail = window.document.createElement('td');
+                const tdPhone = window.document.createElement('td');
+                tdId.textContent = user.id.toString();
+                tdFirstname.textContent = user.firstname;
+                tdLastname.textContent = user.lastname;
                 tdAddress.textContent = user.address
                     ? `${user.address.street}, ${user.address.city}, ${user.address.state} ${user.address.zip}, ${user.address.country}`
                     : '';
-                const tdEmail = window.document.createElement('td');
                 tdEmail.textContent = user.email;
-                const tdPhone = window.document.createElement('td');
                 tdPhone.textContent = user.phone;
                 tr.appendChild(tdId);
                 tr.appendChild(tdFirstname);

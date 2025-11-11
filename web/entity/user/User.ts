@@ -1,4 +1,4 @@
-import {IAddress} from "./Address.js";
+import {IAddress} from "./Address";
 
 export interface IUser {
   id: number;

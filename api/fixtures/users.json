@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "username": "luke.skywalker",
     "firstname": "Luke",
     "lastname": "Skywalker",
     "address": {
@@ -16,6 +17,7 @@
   },
   {
     "id": 2,
+    "username": "leia.organa",
     "firstname": "Leia",
     "lastname": "Organa",
     "address": {
@@ -31,6 +33,7 @@
   },
   {
     "id": 3,
+    "username": "din.djarin",
     "firstname": "Din",
     "lastname": "Djarin",
     "address": {
@@ -46,6 +49,7 @@
   },
   {
     "id": 4,
+    "username": "ahsoka.tano",
     "firstname": "Ahsoka",
     "lastname": "Tano",
     "address": {
@@ -61,6 +65,7 @@
   },
   {
     "id": 5,
+    "username": "han.solo",
     "firstname": "Han",
     "lastname": "Solo",
     "email": "han.solo@falcon.smuggler",
@@ -68,6 +73,7 @@
   },
   {
     "id": 6,
+    "username": "rey.skywalker",
     "firstname": "Rey",
     "lastname": "Skywalker",
     "email": "rey.skywalker@jediorder.holo",
@@ -75,6 +81,7 @@
   },
   {
     "id": 7,
+    "username": "grogu",
     "firstname": "Grogu",
     "email": "grogu@mandalorian.covert",
     "phone": "+1138-000-GROG"

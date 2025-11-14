@@ -1,7 +1,8 @@
-import {IAddress} from "./Address";
+import {IAddress} from "./Address.js";
 
 export interface IUser {
   id: number;
+  username: string;
   firstname: string;
   lastname: string;
   address?: IAddress;
@@ -11,6 +12,7 @@ export interface IUser {
 
 export class User implements IUser {
   id: number;
+  username: string;
   firstname: string;
   lastname: string;
   address: IAddress;
@@ -19,6 +21,7 @@ export class User implements IUser {
 
   constructor(
     id: number = 42,
+    username: string = "",
     firstname: string = "",
     lastname: string = "",
     address: IAddress,
@@ -26,6 +29,7 @@ export class User implements IUser {
     phone: string = "",
   ) {
     this.id = id;
+    this.username = username;
     this.firstname = firstname;
     this.lastname = lastname;
     this.address = address;

@@ -125,7 +125,7 @@ When something is inline, every whitespace is treated as an actual space. The ad
   "name": "vanilla",
   "version": "1.0.0",
   "description": "building web and mobile apps",
-  "main": "index.js",
+  "main": "users.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
-        <script src="users.js" type="module"></script>
+        <script src="src/users.js" type="module"></script>
         <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
         <title>bwma</title>
     </head>
@@ -12,13 +12,15 @@
             <div class="card row">
                 <label for="search" hidden="hidden"></label>
                 <input type="text" id="search" placeholder="Search">
-                <button type="button" class="button">Search</button>
+                <button type="button" id="search-button" class="button">Search</button>
+                <button type="button" id="reset-button" class="button">Reset</button>
             </div>
             <div style="overflow-x:auto;" class="card">
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Username</th>
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Address</th>
@@ -26,8 +28,10 @@
                         <th>Phone</th>
                     </tr>
                     </thead>
-                    <tbody id="users"></tbody>
+                    <tbody id="result"></tbody>
+                    <tbody id="users-table"></tbody>
                 </table>
+                <div id="users" style="display: none;"></div>
             </div>
         </main>
     </body>

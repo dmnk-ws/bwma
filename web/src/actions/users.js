@@ -11,7 +11,7 @@ import { mapUsersFromJSON } from "../services/userMapper.js";
 const API_USER_URL = 'http://127.0.0.1:8081/users';
 export function fetchAllUsers() {
     return __awaiter(this, void 0, void 0, function* () {
-        return yield fetch(`${API_USER_URL}/`)
+        return yield fetch(`${API_USER_URL}`)
             .then((response) => response.json())
             .then((users) => mapUsersFromJSON(users))
             .catch((error) => console.error(error));

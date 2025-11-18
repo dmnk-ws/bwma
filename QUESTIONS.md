@@ -103,6 +103,30 @@ a.link {
 }
 ```
 
+> **T5)** Frameworks like Vue do a lot of complex *magic* internally, simplifying development compared to *vanilla coding*. Use the browser dev tools and the network tab to understand how many HTML, CSS and JS files are loaded to render the app.
+
+**Vue App File Loading Analysis (Development Mode with Vite):**
+
+To inspect: Open http://localhost:5174/ in your browser, open DevTools (F12), go to the Network tab, and refresh the page.
+
+**Files loaded in development mode:**
+1. **One HTML file** - `index.html`
+2. **Multiple JavaScript modules** loaded separately:
+   - `client` - Vite's hot module replacement (HMR) client
+   - `src/main.js` - Application entry point
+   - `src/App.vue` - Root Vue component (compiled to JS)
+   - Individual `.vue` component files (each loaded as separate JS modules)
+   - `node_modules/vue/dist/vue.runtime.esm-bundler.js` - Vue framework (~500KB uncompressed)
+3. **CSS files** - Loaded as separate requests or injected via JavaScript:
+   - Component-scoped styles
+   - Global stylesheets (if any)
+4. **Static assets** - Images, fonts, logo, etc.
+    - Favicon.ico
+    - logo.svg
+
+Around 30+ separate files depending on the number of components.
+
+
 
 # Other questions
 
@@ -163,3 +187,13 @@ When something is inline, every whitespace is treated as an actual space. The ad
 ```
 
 - **dependencies:** List of all the external packages the project needs to run in production
+
+
+> **5)** What do you see after creating the Vue app? What is the URL (including port number) the frontend is running?
+
+http://localhost:5173/
+
+The default port for Vite (which Vue 3 uses) is port 5173. If that port is already in use, Vite will automatically try the next available port (5174, 5175, etc.) and
+display that in the terminal output.
+
+You can see a welcome page in the browser with information about documentation, tooling, ecosystem, community and support.

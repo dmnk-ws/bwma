@@ -5,7 +5,9 @@ const router = express.Router();
 router.get('', (req, res) => {
     const users = require('../fixtures/users.json');
 
-    res.json(users);
+    setTimeout(() => {
+        res.json(users);
+    }, 3000);
 });
 
 module.exports = router;

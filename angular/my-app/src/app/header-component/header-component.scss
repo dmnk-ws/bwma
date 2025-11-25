@@ -1,0 +1,18 @@
+nav {
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px 0 20px;
+
+  a {
+    background-color: #5ca7c4;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #4a8fa8;
+  }
+}

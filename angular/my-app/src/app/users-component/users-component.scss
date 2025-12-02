@@ -66,17 +66,6 @@ table {
   gap: 20px;
 }
 
-.card {
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: 20px;
-  overflow-x: auto;
-
-  &:not(:has(table)) {
-    padding: 20px;
-  }
-}
-
 .button {
   display: block;
   border: 1px solid #000;
@@ -90,5 +79,14 @@ table {
   &:hover {
     background: #5ca7c4;
     background: linear-gradient(90deg, rgba(92, 167, 196, 1) 0%, rgba(214, 241, 255, 1) 100%);
+  }
+}
+
+.delete {
+  border-color: red;
+
+  &:hover {
+    background: red none;
+    color: white;
   }
 }

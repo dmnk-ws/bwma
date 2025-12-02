@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 20px;
+  overflow-x: auto;
+
+  &:not(:has(table)) {
+    padding: 20px;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}

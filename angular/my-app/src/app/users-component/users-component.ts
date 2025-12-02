@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {IUser} from '../user-component/user.interface';
-import {UserService} from '../user-service';
+import { RouterLink } from '@angular/router';
+import { IUser } from '../user-component/user.interface';
+import { UserService } from '../user-service';
 
 @Component({
   selector: 'app-users-component',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './users-component.html',
   styleUrl: './users-component.scss',
 })
@@ -17,6 +18,8 @@ export class UsersComponent {
   }
 
   ngOnInit(): void {
-    this.users = this.userService.getUsers();
+    this.userService.fetchUsers().subscribe((users: IUser[]) => {
+      this.users = users;
+    });
   }
 }

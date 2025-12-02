@@ -1,0 +1,19 @@
+<main class="container">
+  <h1 id="name">User Detail</h1>
+  <div class="card">
+    <dl class="user-details">
+      <dt>Username</dt>
+      <dd>{{user?.username ?? '-'}}</dd>
+      <dt>Firstname</dt>
+      <dd>{{user?.firstname ?? '-'}}</dd>
+      <dt>Lastname</dt>
+      <dd>{{user?.lastname ?? '-'}}</dd>
+      <dt>Phone</dt>
+      <dd>{{user?.phone ?? '-'}}</dd>
+      <dt>Email</dt>
+      <dd>{{user?.email ?? '-'}}</dd>
+      <dt>Address</dt>
+      <dd>{{parseAddress(user?.address)}}</dd>
+    </dl>
+  </div>
+</main>

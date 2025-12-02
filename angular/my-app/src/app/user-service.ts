@@ -3,6 +3,8 @@ import { IUser } from './user-component/user.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+const USERS_API = 'http://localhost:8081/users'; // '/users.json';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -23,7 +25,7 @@ export class UserService {
   }
 
   fetchUsers(): Observable<IUser[]> {
-    const usersObservable = this.client.get<IUser[]>('/users.json');
+    const usersObservable = this.client.get<IUser[]>(USERS_API);
     usersObservable.subscribe((users) => this.users = users);
 
     return usersObservable;

@@ -12,14 +12,17 @@ import { UserService } from '../user-service';
 export class UsersComponent {
   private readonly userService: UserService;
   protected users: IUser[] = [];
+  protected loading: boolean = false;
 
   constructor(userService: UserService) {
     this.userService = userService;
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.userService.fetchUsers().subscribe((users: IUser[]) => {
       this.users = users;
+      this.loading = false;
     });
   }
 }

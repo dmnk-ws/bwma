@@ -24,7 +24,7 @@ const fetchUsers = () => {
   </div>
 
   <div v-if="loading" class="container">
-    <div  class="spinner"></div>
+    <div class="spinner"></div>
   </div>
   <template v-else>
     <div v-if="users.length > 0" class="header">

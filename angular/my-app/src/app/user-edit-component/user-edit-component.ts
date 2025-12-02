@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {UserService} from '../user-service';
 import {IAddress, IUser} from '../user-component/user.interface';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-user-edit-component',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-edit-component.html',
   styleUrl: './user-edit-component.scss',
 })

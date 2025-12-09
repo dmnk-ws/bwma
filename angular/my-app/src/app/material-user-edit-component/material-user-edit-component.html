@@ -1,0 +1,26 @@
+<main class="container">
+  <h1>Edit {{user?.firstname + " " + user?.lastname}}</h1>
+
+  @if (user) {
+    <div class="card">
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Firstname</mat-label>
+          <input matInput id="firstname" name="firstname" type="text" [(ngModel)]="user.firstname" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Lastname</mat-label>
+          <input matInput id="lastname" name="lastname" type="text" [(ngModel)]="user.lastname" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Phone</mat-label>
+          <input matInput id="phone" name="phone" type="text" [(ngModel)]="user.phone" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput id="email" name="email" type="email" [(ngModel)]="user.email" />
+        </mat-form-field>
+      </form>
+    </div>
+  }
+</main>

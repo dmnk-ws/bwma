@@ -236,3 +236,39 @@ Both use major version 20. This is necessary because:
 3. **The CDK dependency chain:** Material → CDK → Angular Core. If any link breaks, the whole chain fails.
 4. **Synchronized releases:** The Angular team releases Material alongside Angular to ensure compatibility. Using Material v19 with Angular v20 (or vice versa) could cause runtime errors or build failures.
 
+
+> **7)** Do you see an advantage of a directive compared to a component now? See https://material.angular.io/components/button/overview
+
+Yes, directives have a significant advantage over components in certain scenarios:
+
+1. **Native element preservation:** A directive like `matButton` can be applied to native HTML elements (`<button>`, `<a>`) without replacing them. This preserves the semantic meaning and native behavior (e.g., `<a>` for navigation, `<button>` for actions).
+
+2. **Flexibility:** The same directive can be applied to different element types. `matButton` works on both `<button>` and `<a>` elements, adding Material styling while keeping the native element's functionality intact.
+
+3. **Accessibility:** Native elements come with built-in accessibility features. Using `<a matButton>` maintains proper link behavior for screen readers and keyboard navigation, whereas a custom `<mat-button>` component would need to re-implement these features.
+
+4. **No wrapper elements:** Directives don't add extra DOM elements. A component would wrap content in its own element, potentially affecting layout and styling.
+
+> **8)** What did you need to import and where to use the directive in a template?
+
+**Import in the component TypeScript file (`users-component.ts`):**
+```typescript
+import { MatButtonModule } from '@angular/material/button';
+```
+
+**Add to the component's imports array:**
+```typescript
+@Component({
+  selector: 'app-users-component',
+  imports: [RouterLink, MatButtonModule],
+  // ...
+})
+```
+
+**Use in the template (`users-component.html`):**
+```html
+<a matButton="filled" [routerLink]="['/user', user.id]">Show</a>
+```
+
+The directive is applied as an attribute on native elements. The value `"filled"` specifies the button appearance variant (other options include `"outlined"`, `"elevated"`, `"tonal"`).
+

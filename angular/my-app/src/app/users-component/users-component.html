@@ -33,9 +33,9 @@
                 <td>{{ user.phone }}</td>
                 <td>
                   <div class="flex">
-                    <a class="button" [routerLink]="['/user', user.id]">Show</a>
-                    <a class="button" [routerLink]="['/user', user.id, 'edit']">Edit</a>
-                    <a class="button delete" [routerLink]="['/users']">Delete</a>
+                    <a matButton="filled" [routerLink]="['/user', user.id]">Show</a>
+                    <a matButton="filled" [routerLink]="['/user', user.id, 'edit']">Edit</a>
+                    <a matButton="filled" [routerLink]="['/users']">Delete</a>
                   </div>
                 </td>
               </tr>

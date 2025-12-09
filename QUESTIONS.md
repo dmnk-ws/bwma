@@ -197,3 +197,42 @@ The default port for Vite (which Vue 3 uses) is port 5173. If that port is alrea
 display that in the terminal output.
 
 You can see a welcome page in the browser with information about documentation, tooling, ecosystem, community and support.
+
+> **6)** Which files get modified? Is there an Angular package being installed? Does
+this give a hint why we need matching versions of Material and Angular?
+Look at the changes caused by the schematics scripts that ran on command
+line command execution.
+
+**Files modified by Angular Material schematics:**
+
+1. **package.json** - Two new packages added:
+   - `@angular/cdk`: ^20.2.14 (Component Dev Kit)
+   - `@angular/material`: ^20.2.14
+
+2. **index.html** - Google Fonts links added:
+   - Roboto font (weights 300, 400, 500)
+   - Material Icons font
+
+3. **styles.scss** - Material theming setup:
+   - Imports `@angular/material` as a Sass module
+   - Configures Material 3 theming with `mat.theme()` mixin
+   - Sets color palettes (azure primary, blue tertiary)
+   - Configures typography (Roboto) and density
+   - Applies system-level CSS variables for background, text color, and fonts
+
+**Angular package being installed:**
+
+Yes, `@angular/cdk` (Component Dev Kit) is automatically installed alongside `@angular/material`. The CDK is a foundational library that Material depends on - it provides behavior primitives like accessibility, overlays, drag-and-drop, etc.
+
+**Why matching versions are required:**
+
+The version numbers tell the story:
+- Angular core packages: `^20.3.0`
+- Angular Material/CDK: `^20.2.14`
+
+Both use major version 20. This is necessary because:
+1. **Internal API dependencies:** Material components use Angular's internal APIs (change detection, dependency injection, rendering). These APIs can change between major versions.
+2. **Build system compatibility:** Material uses Angular's compiler and build tools, which must be compatible.
+3. **The CDK dependency chain:** Material → CDK → Angular Core. If any link breaks, the whole chain fails.
+4. **Synchronized releases:** The Angular team releases Material alongside Angular to ensure compatibility. Using Material v19 with Angular v20 (or vice versa) could cause runtime errors or build failures.
+

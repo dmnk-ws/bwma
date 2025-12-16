@@ -1,0 +1,11 @@
+<div class="card">
+  <form [formGroup]="loginForm">
+    <label for="email">Email</label>
+    <input id="email" type="email" required formControlName="email" />
+    <label for="password">Password</label>
+    <input id="password" type="password" required formControlName="password" />
+    <label for="remember">Remember me</label>
+    <input id="remember" type="checkbox" formControlName="remember" />
+    <button [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>

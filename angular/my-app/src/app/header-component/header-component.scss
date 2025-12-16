@@ -6,13 +6,20 @@ nav {
   padding: 0 20px 0 20px;
 
   a {
-    background-color: #5ca7c4;
-    padding: 20px;
-    color: white;
     text-decoration: none;
   }
 
-  a:hover {
+  img {
+    display: block;
+  }
+
+  .link {
+    background-color: #5ca7c4;
+    padding: 20px;
+    color: white;
+  }
+
+  .link:hover {
     background-color: #4a8fa8;
   }
 }

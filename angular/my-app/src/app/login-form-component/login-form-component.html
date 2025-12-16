@@ -1,11 +1,36 @@
 <div class="card">
-  <form [formGroup]="loginForm">
-    <label for="email">Email</label>
-    <input id="email" type="email" required formControlName="email" />
-    <label for="password">Password</label>
-    <input id="password" type="password" required formControlName="password" />
-    <label for="remember">Remember me</label>
-    <input id="remember" type="checkbox" formControlName="remember" />
-    <button [disabled]="loginForm.invalid">Login</button>
+  <form class="container" [formGroup]="loginForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        id="email"
+        type="email"
+        required
+        formControlName="email"
+        placeholder="pat@example.com"
+        [formControl]="loginForm.controls.email"
+      />
+      @if (loginForm.controls.email.invalid) {
+        <mat-error>Invalid email</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        id="password"
+        type="password"
+        required
+        formControlName="password"
+        [formControl]="loginForm.controls.password"
+        placeholder="********"
+      />
+      @if (loginForm.controls.password.invalid) {
+        <mat-error>Password is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-checkbox id="remember" type="checkbox" formControlName="remember">Remember me</mat-checkbox>
+    <button mat-flat-button [disabled]="loginForm.invalid">Login</button>
   </form>
 </div>

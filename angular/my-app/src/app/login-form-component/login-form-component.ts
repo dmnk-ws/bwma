@@ -19,7 +19,7 @@ import {MatButton} from '@angular/material/button';
   styleUrl: './login-form-component.scss',
 })
 export class LoginFormComponent {
-  protected loginForm = new FormGroup({
+  loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
     remember: new FormControl(false),

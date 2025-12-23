@@ -20,4 +20,16 @@ describe('LoginFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have an invalid initial form', () => {
+    expect(component.loginForm.valid).toEqual(false);
+  });
+
+  it('should have the expected initial form values', () => {
+    expect(component.loginForm.value).toEqual({
+      email: '',
+      password: '',
+      remember: false,
+    });
+  });
 });

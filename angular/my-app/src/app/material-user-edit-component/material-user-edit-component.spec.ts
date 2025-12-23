@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaterialUserEditComponent } from './material-user-edit-component';
+import {provideHttpClient} from '@angular/common/http';
+import {provideRouter} from '@angular/router';
 
 describe('MaterialUserEditComponent', () => {
   let component: MaterialUserEditComponent;
@@ -8,7 +10,8 @@ describe('MaterialUserEditComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaterialUserEditComponent]
+      imports: [MaterialUserEditComponent],
+      providers: [provideHttpClient(), provideRouter([])],
     })
     .compileComponents();
 

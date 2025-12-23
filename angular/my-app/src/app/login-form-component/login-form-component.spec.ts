@@ -22,7 +22,7 @@ describe('LoginFormComponent', () => {
   });
 
   it('should have an invalid initial form', () => {
-    expect(component.loginForm.valid).toEqual(false);
+    expect(component.loginForm.valid).toBe(false);
   });
 
   it('should have the expected initial form values', () => {

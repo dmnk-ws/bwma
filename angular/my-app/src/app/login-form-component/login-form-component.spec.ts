@@ -32,4 +32,68 @@ describe('LoginFormComponent', () => {
       remember: false,
     });
   });
+
+  it('should have valid form', () => {
+    component.loginForm.setValue({
+      email: 'luke.skywalker@jediorder.holo',
+      password: 'secret',
+      remember: true,
+    });
+    fixture.detectChanges();
+
+    expect(component.loginForm.valid).toBe(true);
+    expect(component.loginForm.value).toEqual({
+      email: 'luke.skywalker@jediorder.holo',
+      password: 'secret',
+      remember: true,
+    });
+  });
+
+  it('should have invalid form without email', () => {
+    component.loginForm.setValue({
+      email: '',
+      password: 'secret',
+      remember: true,
+    });
+    fixture.detectChanges();
+
+    expect(component.loginForm.valid).toBe(false);
+    expect(component.loginForm.value).toEqual({
+      email: '',
+      password: 'secret',
+      remember: true,
+    });
+  });
+
+  it('should have invalid form with incorrect email format', () => {
+    component.loginForm.setValue({
+      email: 'luke.skywalker',
+      password: '',
+      remember: true,
+    });
+    fixture.detectChanges();
+
+    expect(component.loginForm.valid).toBe(false);
+    expect(component.loginForm.value).toEqual({
+      email: 'luke.skywalker',
+      password: '',
+      remember: true,
+    });
+  });
+
+  it('should have invalid form without password', () => {
+    component.loginForm.setValue({
+      email: 'luke.skywalker@jediorder.holo',
+      password: '',
+      remember: true,
+    });
+    fixture.detectChanges();
+
+    expect(component.loginForm.valid).toBe(false);
+    expect(component.loginForm.value).toEqual({
+      email: 'luke.skywalker@jediorder.holo',
+      password: '',
+      remember: true,
+    });
+  });
 });

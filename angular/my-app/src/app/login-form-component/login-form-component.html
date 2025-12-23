@@ -1,5 +1,5 @@
 <div class="card">
-  <form class="container" [formGroup]="loginForm">
+  <form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input

@@ -96,4 +96,17 @@ describe('LoginFormComponent', () => {
       remember: true,
     });
   });
+
+  it('should have set \'remember\' to local storage', () => {
+    const localStorageSpy = spyOn(window.localStorage, 'setItem');
+    component.loginForm.setValue({
+      email: 'luke.skywalker@jediorder.holo',
+      password: 'secret',
+      remember: true,
+    });
+
+    component.onSubmit();
+
+    expect(localStorageSpy).toHaveBeenCalledOnceWith('remember', 'true');
+  });
 });

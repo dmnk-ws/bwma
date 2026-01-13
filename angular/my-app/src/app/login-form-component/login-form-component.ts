@@ -1,39 +1,36 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatError, MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatButton} from '@angular/material/button';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AppStateService} from '../app-state-service';
 
 @Component({
   selector: 'app-login-form-component',
-  imports: [
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatButton,
-    MatError,
-  ],
+  standalone: false,
   templateUrl: './login-form-component.html',
   styleUrl: './login-form-component.scss',
 })
 export class LoginFormComponent {
   private router: Router;
+  private readonly appStateService: AppStateService;
+
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
     remember: new FormControl(false),
   });
 
-  constructor(router: Router) {
+  constructor(router: Router, appStateService: AppStateService) {
     this.router = router;
+    this.appStateService = appStateService;
   }
 
   onSubmit() {
+    if (this.loginForm.invalid || !this.loginForm.value.email) return;
+
     const rememberMe = this.loginForm.value.remember;
     if (typeof rememberMe == 'boolean') window.localStorage.setItem('remember', String(rememberMe));
+
+    this.appStateService.login(this.loginForm.value.email);
 
     this.router.navigate(['/dashboard']);
   }

@@ -10,6 +10,7 @@
         formControlName="email"
         placeholder="pat@example.com"
         [formControl]="loginForm.controls.email"
+        autocomplete="off"
       />
       @if (loginForm.controls.email.invalid) {
         <mat-error>Invalid email</mat-error>
@@ -25,6 +26,7 @@
         formControlName="password"
         [formControl]="loginForm.controls.password"
         placeholder="********"
+        autocomplete="off"
       />
       @if (loginForm.controls.password.invalid) {
         <mat-error>Password is required</mat-error>

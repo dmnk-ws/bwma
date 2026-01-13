@@ -272,3 +272,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 The directive is applied as an attribute on native elements. The value `"filled"` specifies the button appearance variant (other options include `"outlined"`, `"elevated"`, `"tonal"`).
 
+> **9)** From which Angular package do you need to import {computed, Signal,
+signal, WritableSignal} ?
+```typescript
+import {computed, Signal, signal, WritableSignal} from '@angular/core';
+```

@@ -6,10 +6,12 @@ import {UserEditComponent} from './user-edit-component/user-edit-component';
 import {MaterialUsersComponent} from './material-users-component/material-users-component';
 import {MaterialUserEditComponent} from './material-user-edit-component/material-user-edit-component';
 import {LoginFormComponent} from './login-form-component/login-form-component';
+import {CounterComponent} from './counter-component/counter-component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'counter', component: CounterComponent },
   { path: 'users', component: UsersComponent },
   { path: 'user/:id', component: UserComponent },
   { path: 'user/:id/edit', component: UserEditComponent },

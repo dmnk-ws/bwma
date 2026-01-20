@@ -126,6 +126,37 @@ To inspect: Open http://localhost:5174/ in your browser, open DevTools (F12), go
 
 Around 30+ separate files depending on the number of components.
 
+> **T6)**  Analyse CWV using the „Performance“ Tab in the Browser Dev Tools
+
+> What properties are displayed? Is there a "poor" property?
+
+On the initial page load, the following properties are displayed:
+- Largest Contentful Paint (LCP): 0.29 seconds, which is a good value
+- Cumulative Layout Shift (CLS): 0 seconds, which is a good value
+- Interaction To Next Paint (INP): 40 ms, which is a good value
+
+> Repeat the measurement simulating 3G network. Is there a "poor" property?
+
+Yes, the Largest Contentful Paint (LCP) value decreases to 4.33 seconds, which is bad.
+
+> Repeat the analysis for https://www.hs-fulda.de/studium/ihre-bewerbung with no network throttling and throttling to 3G. Are there any "poor" properties?
+
+No throttling:
+- Largest Contentful Paint (LCP): 0.11 seconds, which is value is good
+- Cumulative Layout Shift (CLS): 0 seconds, which is a good value
+- Interaction To Next Paint (INP): 32 ms, which is a good value
+
+Throttling to 3G:
+- Largest Contentful Paint (LCP): 5.61 seconds, which is a pretty bad value
+- Cumulative Layout Shift (CLS): 0,0 seconds, which is a good value
+- Interaction To Next Paint (INP): 48 ms, which is a good value
+
+
+> What could be done to improve the poor score?
+
+- Compress images and use modern formats (WebP, AVIF)
+- Implement responsive images with srcset and sizes attributes
+- Progressive image rendering
 
 
 # Other questions

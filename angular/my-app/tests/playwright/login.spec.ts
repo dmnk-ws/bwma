@@ -34,6 +34,7 @@ test.describe('Login', () => {
 
     await page.waitForURL('http://localhost:4200/dashboard');
 
+    expect(page.url()).toContain('/dashboard');
     await expect(page.locator('data-testid=dashboard-title')).toHaveText('Dashboard');
   });
 
@@ -47,6 +48,6 @@ test.describe('Login', () => {
     await expect(page.locator('data-testid=login-email-error')).toHaveText('Invalid email');
     await expect(page.locator('data-testid=login-password-error')).toHaveText('Password is required');
     await expect(page.locator('data-testid=login-submit-button')).toBeDisabled();
-  })
-})
+  });
+});
 

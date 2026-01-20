@@ -1,38 +1,50 @@
-<div class="card">
-  <form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input
-        matInput
-        id="email"
-        type="email"
-        required
-        formControlName="email"
-        placeholder="pat@example.com"
-        [formControl]="loginForm.controls.email"
-        autocomplete="off"
-      />
-      @if (loginForm.controls.email.invalid) {
-        <mat-error>Invalid email</mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Password</mat-label>
-      <input
-        matInput
-        id="password"
-        type="password"
-        required
-        formControlName="password"
-        [formControl]="loginForm.controls.password"
-        placeholder="********"
-        autocomplete="off"
-      />
-      @if (loginForm.controls.password.invalid) {
-        <mat-error>Password is required</mat-error>
-      }
-    </mat-form-field>
-    <mat-checkbox id="remember" type="checkbox" formControlName="remember">Remember me</mat-checkbox>
-    <button mat-flat-button [disabled]="loginForm.invalid">Login</button>
-  </form>
-</div>
+<main class="container">
+  <h1 data-testid="login-title">Login</h1>
+  <div class="card">
+    <form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          data-testid="login-email-input"
+          matInput
+          id="email"
+          type="email"
+          required
+          formControlName="email"
+          placeholder="pat@example.com"
+          [formControl]="loginForm.controls.email"
+          autocomplete="off"
+        />
+        @if (loginForm.controls.email.invalid) {
+          <mat-error data-testid="login-email-error">Invalid email</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          data-testid="login-password-input"
+          matInput
+          id="password"
+          type="password"
+          required
+          formControlName="password"
+          [formControl]="loginForm.controls.password"
+          placeholder="********"
+          autocomplete="off"
+        />
+        @if (loginForm.controls.password.invalid) {
+          <mat-error data-testid="login-password-error">Password is required</mat-error>
+        }
+      </mat-form-field>
+      <mat-checkbox
+        data-testid="login-remember-me-checkbox"
+        id="remember"
+        type="checkbox"
+        formControlName="remember"
+      >
+        Remember me
+      </mat-checkbox>
+      <button data-testid="login-submit-button" mat-flat-button [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+</main>

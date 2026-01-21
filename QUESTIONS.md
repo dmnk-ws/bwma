@@ -126,7 +126,7 @@ To inspect: Open http://localhost:5174/ in your browser, open DevTools (F12), go
 
 Around 30+ separate files depending on the number of components.
 
-> **T6)**  Analyse CWV using the „Performance“ Tab in the Browser Dev Tools
+> **T6)** Analyse CWV using the "Performance" Tab in the Browser Dev Tools
 
 > What properties are displayed? Is there a "poor" property?
 
@@ -157,6 +157,31 @@ Throttling to 3G:
 - Compress images and use modern formats (WebP, AVIF)
 - Implement responsive images with srcset and sizes attributes
 - Progressive image rendering
+
+
+> **T7)** Analyse both URLs using the "Lighthouse" Tab in the Chrome Browser Dev Tools. Perform a scan both for mobile and desktop and check recommendations.
+
+> Is there a difference between mobile and desktop?
+
+There are significant differences between the mobile and desktop versions. The mobile performance of the start page (77) is worse than the desktop performance (93), and even worse for the other URL on the mobile version (67).
+
+> What metrics feed into the performance score?
+
+The performance score is based on the following metrics:
+- First Contentful Paint (FCP)
+- Speed Index (SI)
+- Largest Contentful Paint (LCP)
+- Total Blocking Time (TBT)
+- Cumulative Layout Shift (CLS)
+
+> What are the two top recommendations to improve mobile performance?
+
+- **Render blocking requests**: Requests are blocking the page's initial render, which may delay LCP. Deferring or inlining can move these network requests out of the critical path
+- **Use efficient cache lifetimes**: A long cache lifetime can speed up repeat visits to your page.
+
+> Find out a potential SEO improvement by checking the recommendations
+
+- **Links do not have descriptive text**: Descriptive link text helps search engines understand your content.
 
 
 # Other questions

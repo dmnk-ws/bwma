@@ -201,6 +201,17 @@ The performance score is based on the following metrics:
 - `public/icons/` (directory with PWA icon files)
 
 
+> **T8)** How can you be sure the Service-Worker JS API is supported by all browsers?
+
+You can check browser support on [caniuse.com](https://caniuse.com/serviceworkers). To ensure the API is available at runtime, use feature detection:
+
+```javascript
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+```
+
+
 # Other questions
 
 ---

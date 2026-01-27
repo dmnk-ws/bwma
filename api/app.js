@@ -4,7 +4,12 @@ const api = require('./routes/api.js');
 
 const app = express();
 const port = 8081;
-const allowedOrigins = ['http://127.0.0.1:8000', 'http://localhost:5173', 'http://localhost:4200'];
+const allowedOrigins = [
+    'http://127.0.0.1:8000',
+    'http://localhost:5173',
+    'http://localhost:4200',
+    'http://127.0.0.1:4200'
+];
 
 app.use((req, res, next) => {
     const origin = req.headers.origin;

@@ -26,5 +26,21 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-calls",
+      "urls": [
+        "http://127.0.0.1:8081/**",
+        "https://127.0.0.1:8081/**",
+        "http://localhost:8081/**",
+        "https://localhost:8081/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "freshness"
+      }
+    }
   ]
 }

@@ -184,6 +184,23 @@ The performance score is based on the following metrics:
 - **Links do not have descriptive text**: Descriptive link text helps search engines understand your content.
 
 
+> **T8)** Add PWA capabilities to your app using an Angular schematic to install PWA content.
+
+> Which existing files are modified?
+
+- `angular.json`
+- `package.json`
+- `package-lock.json`
+- `src/app/app/app-module.ts`
+- `src/index.html`
+
+> Which ones are added?
+
+- `ngsw-config.json`
+- `public/manifest.webmanifest`
+- `public/icons/` (directory with PWA icon files)
+
+
 # Other questions
 
 ---

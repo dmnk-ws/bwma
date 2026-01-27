@@ -7,10 +7,11 @@ import {MaterialUsersComponent} from './material-users-component/material-users-
 import {MaterialUserEditComponent} from './material-user-edit-component/material-user-edit-component';
 import {LoginFormComponent} from './login-form-component/login-form-component';
 import {CounterComponent} from './counter-component/counter-component';
+import {authGuard} from './auth-guard';
 
 export const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] },
   { path: 'counter', component: CounterComponent },
   { path: 'users', component: UsersComponent },
   { path: 'user/:id', component: UserComponent },

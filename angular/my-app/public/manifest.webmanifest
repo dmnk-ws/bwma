@@ -1,6 +1,7 @@
 {
-  "name": "my-app",
-  "short_name": "my-app",
+  "name": "Angular PWA",
+  "short_name": "Angular PWA",
+  "theme_color": "#66cc33",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

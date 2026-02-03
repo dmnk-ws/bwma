@@ -393,3 +393,10 @@ Yes, now the external CSS affects the web component!
 Without Shadow DOM, the `<div>Hello, World!</div>` is rendered directly into the **light DOM** (the main document).
 
 **Key takeaway:** Without Shadow DOM, web components have no style encapsulation. The component's internal elements become part of the regular DOM and are subject to all CSS rules in the document — both intentional and accidental style "leakage"
+
+> **12)** Add the <hello-world></hello-world> custom element in the index.html and serve Angular. Inspect the browser for errors. What is the error message?
+
+**Error messages in the browser console:**
+
+1. `Failed to load resource: the server responded with a status of 404 (Not Found)`
+2. `Refused to execute script from 'http://localhost:4200/public/custom.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.`

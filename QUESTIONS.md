@@ -356,8 +356,40 @@ import { MatButtonModule } from '@angular/material/button';
 
 The directive is applied as an attribute on native elements. The value `"filled"` specifies the button appearance variant (other options include `"outlined"`, `"elevated"`, `"tonal"`).
 
-> **9)** From which Angular package do you need to import {computed, Signal,
-signal, WritableSignal} ?
+> **9)** From which Angular package do you need to import {computed, Signal, signal, WritableSignal} ?
+
 ```typescript
 import {computed, Signal, signal, WritableSignal} from '@angular/core';
 ```
+
+> **10)** Does the CSS affect our Webcomponent?
+
+No, the CSS does not affect the web component's internal content.
+
+The reason is **Shadow DOM encapsulation**. Looking at the `hello-world.js` implementation:
+
+```javascript
+constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+}
+```
+
+Because the component uses `attachShadow()`, it creates a **style boundary** that isolates the component from external styles.
+
+**Ways to style shadow DOM content:**
+
+1. **Internal styles:** Add `<style>` tags inside the shadow root
+2. **CSS Custom Properties:** CSS variables can pierce the shadow boundary
+3. **`::part()` selector:** Expose specific elements for external styling
+
+This encapsulation is one of the main benefits of Shadow DOM — components are protected from unintended style conflicts with the rest of the page.
+
+
+> **11)** Replace the code in our webcomponent by commenting out the `attachShadow` command and changing `this.shadowRoot.innerHTML` to `this.innerHTML`. Does the external CSS change the style now?
+
+Yes, now the external CSS affects the web component! 
+
+Without Shadow DOM, the `<div>Hello, World!</div>` is rendered directly into the **light DOM** (the main document).
+
+**Key takeaway:** Without Shadow DOM, web components have no style encapsulation. The component's internal elements become part of the regular DOM and are subject to all CSS rules in the document — both intentional and accidental style "leakage"

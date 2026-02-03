@@ -58,7 +58,10 @@ export class AppModule {
   }
 
   ngDoBootstrap(): void {
-    const myCustomElement = createCustomElement(BannerComponent, {injector: this.injector});
-    customElements.define('banner', myCustomElement);
+    const bannerElement = createCustomElement(BannerComponent, {injector: this.injector});
+    customElements.define('banner', bannerElement);
+
+    const appElement = createCustomElement(App, {injector: this.injector});
+    customElements.define('app', appElement);
   }
 }

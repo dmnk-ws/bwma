@@ -1,4 +1,4 @@
-import {NgModule, isDevMode, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {NgModule, isDevMode, CUSTOM_ELEMENTS_SCHEMA, Injector} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {HeaderComponent} from '../header-component/header-component';
 import {RouterLink, RouterModule, RouterOutlet} from '@angular/router';
@@ -16,6 +16,7 @@ import {routes} from '../app.routes';
 import {provideHttpClient} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import {BannerComponent} from '../banner-component/banner-component';
+import {createCustomElement} from '@angular/elements';
 
 @NgModule({
   declarations: [
@@ -52,4 +53,12 @@ import {BannerComponent} from '../banner-component/banner-component';
   bootstrap: [App],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+  }
+
+  ngDoBootstrap(): void {
+    const myCustomElement = createCustomElement(BannerComponent, {injector: this.injector});
+    customElements.define('banner', myCustomElement);
+  }
+}

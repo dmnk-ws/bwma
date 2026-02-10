@@ -12,7 +12,7 @@ import {AppStateService} from '../app-state-service';
 export class LoginFormComponent {
   private readonly router: Router;
   private readonly appStateService: AppStateService;
-  protected loginForm: FormGroup<{
+  loginForm: FormGroup<{
     email: FormControl<string>;
     password: FormControl<string>;
     remember: FormControl<boolean>;

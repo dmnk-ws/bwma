@@ -14,22 +14,6 @@ A progressive web development course project covering modern web technologies �
 | `webcomponents/` | Standalone Web Components with Shadow DOM | — |
 | `exercises/` | Exercise sheets (PDFs) for all 12 exercises |  — |
 
-## Exercises
-
-| # | Topic |
-|---|---|
-| 0 | HTML, CSS, Specificity |
-| 1 | Frontend basics, package.json |
-| 2 | CORS, AJAX, RESTful APIs |
-| 3 | Static sites & CMS |
-| 4 | SPA frameworks (Vue) |
-| 7 | Angular Material UI |
-| 8 | Automated testing (Karma, Jasmine, Playwright) |
-| 9 | State management with Angular Signals |
-| 10 | Performance & Core Web Vitals |
-| 11 | PWAs & offline capabilities |
-| 12 | Web Components & Custom Elements |
-
 ## Tech Stack
 
 - **Frontend:** Angular 21, Vue 3, TypeScript, SCSS, Angular Material
